@@ -41,3 +41,6 @@ install:
 
 script:
     - $TEST_COMMAND
+
+after_success:
+  - travis_retry php vendor/bin/coveralls -v
