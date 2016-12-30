@@ -14,8 +14,7 @@
         "php": ">=5.3.29"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.0",
-        "satooshi/php-coveralls": "^1.0"
+        "phpunit/phpunit": "^4.0"
     },
     "autoload": {
         "psr-4": {
@@ -26,9 +25,5 @@
         "psr-4": {
             "Hough\\Generators\\Test\\": "tests"
         }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-ci": "vendor/bin/phpunit --coverage-text"
     }
 }
