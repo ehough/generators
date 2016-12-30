@@ -15,10 +15,8 @@ php:
     - 7.1
     - hhvm
 
-before_script:
-  - rm -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
-  - flags="--prefer-dist"
-  - composer install $flags
+install:
+  - composer install
 
 script:
     - phpunit --coverage-clover clover-coverage.xml
