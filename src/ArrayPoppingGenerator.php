@@ -13,6 +13,9 @@ namespace Hough\Generators;
 
 class ArrayPoppingGenerator extends AbstractGenerator
 {
+    /**
+     * @var array
+     */
     private $_array;
 
     public function __construct(array &$incoming)
@@ -20,6 +23,9 @@ class ArrayPoppingGenerator extends AbstractGenerator
         $this->_array = &$incoming;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function resume($position)
     {
         if (count($this->_array) === 0) {

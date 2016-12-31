@@ -24,9 +24,7 @@ class ArrayGenerator extends AbstractGenerator
     }
 
     /**
-     * @param int $position
-     *
-     * @return null|mixed
+     * {@inheritdoc}
      */
     protected function resume($position)
     {
