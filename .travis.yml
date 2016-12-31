@@ -18,8 +18,11 @@ php:
 install:
   - composer install
 
+before_script:
+  - mkdir coveralls-data
+
 script:
-    - vendor/bin/phpunit --coverage-clover clover-coverage.xml
+    - vendor/bin/phpunit --coverage-clover coveralls-data/clover-coverage.xml
 
 after_success:
   - composer require satooshi/php-coveralls '^1.0'
