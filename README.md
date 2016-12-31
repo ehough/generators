@@ -1,7 +1,8 @@
 # ehough/generators
 
 [![Build Status](https://travis-ci.org/ehough/generators.svg?branch=develop)](https://travis-ci.org/ehough/generators)
-[![Coverage Status](https://coveralls.io/repos/github/ehough/generators/badge.svg?branch=develop)](https://coveralls.io/github/ehough/generators?branch=develop)
+[![Code Coverage](https://scrutinizer-ci.com/g/ehough/generators/badges/coverage.png?b=develop)](https://scrutinizer-ci.com/g/ehough/generators/?branch=develop)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ehough/generators/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/ehough/generators/?branch=develop)
 [![Latest Stable Version](https://poser.pugx.org/ehough/generators/v/stable)](https://packagist.org/packages/ehough/generators)
 [![License](https://poser.pugx.org/ehough/generators/license)](https://packagist.org/packages/ehough/generators)
 
