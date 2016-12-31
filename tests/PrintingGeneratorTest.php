@@ -1,6 +1,6 @@
 <?php
-/**
- * Copyright 2016 Eric Hough (https://github.com/ehough)
+/*
+ * Copyright 2016 Eric D. Hough (https://github.com/ehough)
  *
  * This file is part of ehough/generators (https://github.com/ehough/generators)
  *

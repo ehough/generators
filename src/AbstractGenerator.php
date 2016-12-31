@@ -1,6 +1,6 @@
 <?php
-/**
- * Copyright 2016 Eric Hough (https://github.com/ehough)
+/*
+ * Copyright 2016 Eric D. Hough (https://github.com/ehough)
  *
  * This file is part of ehough/generators (https://github.com/ehough/generators)
  *
@@ -56,9 +56,9 @@ abstract class AbstractGenerator implements \Iterator
     /**
      * Get the yielded value.
      *
-     * @return mixed|null The yielded value.
+     * @return mixed|null the yielded value
      */
-    public final function current()
+    final public function current()
     {
         if (!$this->valid()) {
 
@@ -79,7 +79,7 @@ abstract class AbstractGenerator implements \Iterator
     /**
      * Get the return value of a generator.
      *
-     * @return mixed The generator's return value once it has finished executing.
+     * @return mixed the generator's return value once it has finished executing
      */
     public function getReturn()
     {
@@ -90,9 +90,9 @@ abstract class AbstractGenerator implements \Iterator
     /**
      * Get the yielded key.
      *
-     * @return mixed The yielded key.
+     * @return mixed the yielded key
      */
-    public final function key()
+    final public function key()
     {
         /*
          * Run to the first yield statement, if we haven't already.
@@ -107,17 +107,17 @@ abstract class AbstractGenerator implements \Iterator
      *
      * @return void
      */
-    public final function next()
+    final public function next()
     {
         $this->send(null);
     }
 
     /**
-     * Rewind the iterator
+     * Rewind the iterator.
      *
      * @return void
      */
-    public final function rewind()
+    final public function rewind()
     {
         if ($this->_sendInvokedAtLeastOnce) {
 
@@ -137,7 +137,7 @@ abstract class AbstractGenerator implements \Iterator
      *
      * @return mixed
      */
-    public final function send($value)
+    final public function send($value)
     {
         $this->_lastValueSentIn        = $value;
         $this->_sendInvokedAtLeastOnce = true;
@@ -154,7 +154,7 @@ abstract class AbstractGenerator implements \Iterator
         return $this->current();
     }
 
-    public final function __call($name, $args)
+    final public function __call($name, $args)
     {
         if ($name === 'throw') {
 
@@ -178,12 +178,12 @@ abstract class AbstractGenerator implements \Iterator
      *
      * @return bool False if the iterator has been closed. Otherwise returns true.
      */
-    public final function valid()
+    final public function valid()
     {
         return $this->_hasMoreToExecute;
     }
 
-    public final function __invoke()
+    final public function __invoke()
     {
         return $this;
     }
@@ -191,7 +191,7 @@ abstract class AbstractGenerator implements \Iterator
     /**
      * @return null|mixed
      */
-    protected final function getLastValueSentIn()
+    final protected function getLastValueSentIn()
     {
         return $this->_lastValueSentIn;
     }
@@ -199,7 +199,7 @@ abstract class AbstractGenerator implements \Iterator
     /**
      * @return null|mixed
      */
-    protected final function getLastYieldedValue()
+    final protected function getLastYieldedValue()
     {
         return $this->_lastYieldedValue;
     }
@@ -207,8 +207,8 @@ abstract class AbstractGenerator implements \Iterator
     /**
      * An exception was thrown into the generator from the calling context.
      *
-     * @param \Exception $e        The exception thrown in.
-     * @param int        $position The current position of the generator.
+     * @param \Exception $e        the exception thrown in
+     * @param int        $position the current position of the generator
      *
      * @throws \Exception
      */
@@ -221,14 +221,14 @@ abstract class AbstractGenerator implements \Iterator
     /**
      * Resume execution of the generator.
      *
-     * @param int $position The zero-based "position" of execution.
+     * @param int $position the zero-based "position" of execution
      *
      * @return null|array Return null to indicate completion. Otherwise return an array of up to two elements. If two
      *                    elements in the array, the first will be considered to be the yielded key and the second the
      *                    yielded value. If one element in the array, it will be considered to be the yielded value and
      *                    the yielded key will be $position.
      */
-    protected abstract function resume($position);
+    abstract protected function resume($position);
 
     private function runToNextYieldStatement()
     {

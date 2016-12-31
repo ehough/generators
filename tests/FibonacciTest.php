@@ -1,6 +1,6 @@
 <?php
-/**
- * Copyright 2016 Eric Hough (https://github.com/ehough)
+/*
+ * Copyright 2016 Eric D. Hough (https://github.com/ehough)
  *
  * This file is part of ehough/generators (https://github.com/ehough/generators)
  *
@@ -23,6 +23,7 @@ class FibonacciTest extends \PHPUnit_Framework_TestCase
         if (version_compare(PHP_VERSION, '5.5', '<')) {
 
             $this->markTestSkipped('PHP ' . PHP_VERSION);
+
             return;
         }
 

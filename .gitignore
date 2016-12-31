@@ -3,3 +3,4 @@ composer.lock
 vendor/
 .idea
 .DS_STORE
+.php_cs.cache

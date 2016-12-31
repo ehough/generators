@@ -14,7 +14,8 @@
         "php": ">=5.3.29"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.0"
+        "phpunit/phpunit": "^4.0",
+        "friendsofphp/php-cs-fixer": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -25,5 +26,11 @@
         "psr-4": {
             "Hough\\Generators\\Test\\": "tests"
         }
+    },
+    "scripts": {
+        "test":     "phpunit -c phpunit.xml.dist",
+        "coverage": "phpunit -c phpunit.xml.dist --coverage-text",
+        "cs":       "php-cs-fixer fix -vvv --diff --config ./.php_cs.dist --allow-risky=yes --ansi --dry-run",
+        "cs-fix":   "php-cs-fixer fix -v --diff --config ./.php_cs.dist --allow-risky=yes --ansi"
     }
 }
