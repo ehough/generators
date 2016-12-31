@@ -19,7 +19,7 @@ install:
   - composer install
 
 script:
-    - phpunit --coverage-clover clover-coverage.xml
+    - vendor/bin/phpunit --coverage-clover clover-coverage.xml
 
 after_success:
   - composer require satooshi/php-coveralls '^1.0'
