@@ -13,6 +13,9 @@ namespace Hough\Generators\Test;
 
 use Hough\Generators\Test\fixtures\FibonacciGeneratorSimulated;
 
+/**
+ * @covers \Hough\Generators\AbstractGenerator<extended>
+ */
 class FibonacciTest extends \PHPUnit_Framework_TestCase
 {
     public function testFibonacci()
