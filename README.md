@@ -1,6 +1,7 @@
 # ehough/generators
 
 [![Build Status](https://travis-ci.org/ehough/generators.svg?branch=develop)](https://travis-ci.org/ehough/generators)
+[![Coverage Status](https://coveralls.io/repos/github/ehough/generators/badge.svg)](https://coveralls.io/github/ehough/generators)
 [![Latest Stable Version](https://poser.pugx.org/ehough/generators/v/stable)](https://packagist.org/packages/ehough/generators)
 [![License](https://poser.pugx.org/ehough/generators/license)](https://packagist.org/packages/ehough/generators)
 
