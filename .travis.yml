@@ -19,12 +19,5 @@ install:
   - composer --no-interaction remove --dev friendsofphp/php-cs-fixer # this fails on hhvm, and we don't need it in Travis
   - composer install
 
-before_script:
-  - mkdir coveralls-data
-
 script:
-    - vendor/bin/phpunit --coverage-clover coveralls-data/clover-coverage.xml
-
-after_success:
-  - composer require satooshi/php-coveralls '^1.0'
-  - travis_retry php vendor/bin/coveralls -v
+    - vendor/bin/phpunit --coverage-clover clover-coverage.xml
