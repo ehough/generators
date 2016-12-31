@@ -30,7 +30,7 @@
     "scripts": {
         "test":     "phpunit -c phpunit.xml.dist",
         "coverage": "phpunit -c phpunit.xml.dist --coverage-text",
-        "cs":       "php-cs-fixer fix -vvv --diff --config ./.php_cs.dist --allow-risky=yes --ansi --dry-run",
+        "cs":       "php-cs-fixer fix -v --diff --config ./.php_cs.dist --allow-risky=yes --ansi --dry-run",
         "cs-fix":   "php-cs-fixer fix -v --diff --config ./.php_cs.dist --allow-risky=yes --ansi"
     }
 }
