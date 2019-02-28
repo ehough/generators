@@ -6,14 +6,15 @@
 [![Latest Stable Version](https://poser.pugx.org/ehough/generators/v/stable)](https://packagist.org/packages/ehough/generators)
 [![License](https://poser.pugx.org/ehough/generators/license)](https://packagist.org/packages/ehough/generators)
 
-
 Easily backport [generators](http://php.net/manual/en/language.generators.overview.php) to PHP 5.3 and 5.4.
+
+# ABANDONED
+
+The vast majority of PHP installations now natively support generators, so this library is obsolete.
 
 ## Why?
 
-Generators were introduced to PHP in version 5.5, but sadly [60%](https://w3techs.com/technologies/details/pl-php/5/all) of all PHP web servers still run PHP 5.4 and lower. This library makes it (relatively) easy to backport code that relies on generators for use on legacy systems.
-
-This library will be retired once PHP 5.5+ levels reach 85%. If you don't need to backport code to PHP 5.3 or 5.4, you don't need this library.
+This library makes it (relatively) easy to backport code that relies on generators for use on legacy (PHP < 5.5) systems. If you don't need to backport code to PHP 5.3 or 5.4, you don't need this library.
 
 
 ## Quick Start
